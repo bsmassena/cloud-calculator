@@ -1,4 +1,4 @@
-package com.bsmlima.cloud.tema06.operation;
+package com.bsmlima.cloud.calculator.operation;
 
 public abstract class Operation {
     protected double num1, num2;

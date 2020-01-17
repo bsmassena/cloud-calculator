@@ -1,6 +1,6 @@
-package com.bsmlima.cloud.tema06;
+package com.bsmlima.cloud.calculator;
 
-import com.bsmlima.cloud.tema06.operation.*;
+import com.bsmlima.cloud.calculator.operation.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
