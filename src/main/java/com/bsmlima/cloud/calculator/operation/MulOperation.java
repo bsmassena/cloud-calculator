@@ -2,8 +2,7 @@ package com.bsmlima.cloud.calculator.operation;
 
 public class MulOperation extends Operation {
 
-    public MulOperation(double num1, double num2) {
-        super(num1, num2);
+    public MulOperation() {
         this.operation = Operations.MUL;
     }
 

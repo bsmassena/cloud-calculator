@@ -2,8 +2,7 @@ package com.bsmlima.cloud.calculator.operation;
 
 public class DivOperation extends Operation {
 
-    public DivOperation(double num1, double num2) {
-        super(num1, num2);
+    public DivOperation() {
         this.operation = Operations.DIV;
     }
 

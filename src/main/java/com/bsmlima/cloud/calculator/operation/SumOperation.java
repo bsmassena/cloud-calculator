@@ -2,8 +2,7 @@ package com.bsmlima.cloud.calculator.operation;
 
 public class SumOperation extends Operation {
 
-    public SumOperation(double num1, double num2) {
-        super(num1, num2);
+    public SumOperation() {
         this.operation = Operations.SUM;
     }
 

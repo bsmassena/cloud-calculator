@@ -2,8 +2,7 @@ package com.bsmlima.cloud.calculator.operation;
 
 public class PowOperation extends Operation {
 
-    public PowOperation(double num1, double num2) {
-        super(num1, num2);
+    public PowOperation() {
         this.operation = Operations.POW;
     }
 

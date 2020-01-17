@@ -1,32 +1,20 @@
-# Tema 06 - Deploy no Jetty com Docker
+# Calculadora com RxNetty
 
-Para realizar o deploy da aplicação, será necessário instalar o Docker (```https://www.docker.com/```) e a imagem docker do Jetty (pode ser feito com o comando ```docker pull jetty```)
+Antes de realizar o deploy da aplicação, é preciso certificar-se de:
+* Ter o docker instalado (```https://www.docker.com/```)
+* Nenhuma aplicação estar rodando na porta 8080
 
-Primeiro é preciso buildar o projeto em um arquivo war. Isso pode ser feito entrando na raiz do projeto e executando o seguinte comando:
+Para realizar o deploy, basta executar o seguinte comando:
 ```
-./gradlew clean build
-```
-
-A seguir é necessário buildar a imagem do docker. Isso pode ser feito entrando na raiz do projeto e executando o seguinte comando:
-```
-docker build -t calculator .
+bash deploy.sh
 ```
 
-Por fim, é preciso rodar a imagem docker criado anteriormente. Isso pode ser feito com o comando:
-```
-docker run -p 8080:8080 -d calculator
-```
+Este script deve:
+1. Compilar o projeto utilizando gradle
+2. Construir a imagem docker para o microserviço
+3. Rodar um container docker para a imagem criada
 
-A aplicação possui 5 operações disponíveis:
-* sum
-* sub
-* div
-* mul
-* pow
-
-A calculadora possui 3 parâmetros obrigatórios: num1, num2 e op (a operação realizada será num1 op num2).
-
-Exemplo de url utilizada para calcular 8 * 3.2
+Alguns segundos após executar o script, o microserviço deve estar rodando e poderá ser utilizados da seguinte forma:
 ```
-localhost:8080/calculator?num1=8&num2=3.2&op=mul
+http://localhost:8080/sum/4/8
 ```
